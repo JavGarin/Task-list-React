@@ -1,12 +1,10 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.9);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,8 +15,99 @@
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(to left, #58f770, #aa58ed);
+  background-size: 400%;
+  animation: cambiarColor 2s ease-in alternate infinite;
 }
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2e518b;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 50px;
+  margin: 10px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #485ea8;
+  transition: background-color 0.3s ease;
+}
+
+input {
+  width: 50%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.containerTarea {
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: rgb(38, 59, 77) 0px 20px 30px -10px;
+  background-color: rgb(249, 164, 164);
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.containerTareaCompletada {
+  background-color: rgb(79, 208, 79);
+  transition: all 1s ease-in-out;
+}
+
+.completada {
+  text-decoration: line-through;
+  font-weight: 400;
+  color: #666;
+}
+
+.noCompletada {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+#completar,
+#eliminar {
+  transition: all 0.3s ease-in-out;
+}
+
+#completar:hover,
+#eliminar:hover {
+  background-color: rgb(248, 116, 116);
+  transform: scale(1.05);
+}
+
+@keyframes cambiarColor {
+  0% {
+    background-position: 25% 50%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+
 
