@@ -1,0 +1,30 @@
+.containerTarea {
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: rgb(38, 59, 77) 0px 20px 30px -10px;
+    background-color: rgb(249, 164, 164);
+}
+
+.containerTareaCompletada {
+    transition: all 1s ease-in-out;
+    background-color: rgb(79, 208, 79);
+}
+
+.completada {
+    text-decoration: line-through;
+}
+
+.noCompletada {
+    text-decoration: none;
+}
+
+#completar,
+#eliminar {
+    transition: all 500ms ease-in-out;
+}
+
+#completar:hover,
+#eliminar:hover {
+    background-color: rgb(248, 116, 116);
+}
